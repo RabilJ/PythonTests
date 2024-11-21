@@ -1,4 +1,4 @@
-class Motorcycle:
+class Vehicle:
     is_engine_on = False
     is_headlight_on = False
     is_driving = False
@@ -27,7 +27,23 @@ class Motorcycle:
 
     def stopDriving(self):
         self.is_driving = False
+        print('Stopping')
 
+    def __repr__(self):
+        return (f'{self.make} {self.model} with engine turned'
+        f'{"on" if self.is_engine_on == True else "off"} '
+        f'and headlight {"on" if self.is_headlight_on == True else "off"}')
+
+    def __repr__(self):
+        return (f'{self.make} {self.model} with engine '
+                f'{"on" if self.is_engine_on ==True else "off"} '
+                f'and headlight {"on" if self.is_headlight_on ==True else "off"}')
+
+    def __init__(self, make, model='Civic'):
+        self.make = make
+        self.model = model
+
+class Motorcycle(Vehicle):
     def lean(self, direction):
         if not self.is_driving:
             print("You leaned while not driving and crashed!")
@@ -47,13 +63,37 @@ class Motorcycle:
         else:
             print("Didn't understand that direction")
 
-    def __repr__(self):
-        return (f'{self.make} {self.model} with engine '
-                f'{"on" if self.is_engine_on ==True else "off"} '
-                f'and headlight {"on" if self.is_headlight_on ==True else "off"}')
-    def __init__(self, make, model):
-        self.make = make
-        self.model = model
+class Car(Vehicle):
+    def turn(self,direction):
+        if not self.is_driving:
+            print("You are not driving, turn the engine on")
+            return
+        elif direction == 'left':
+                print('Turning left.')
+        elif direction == 'right':
+            print('Turning right')
+        else:
+            print("Didn't understand the direction.")
+
 moto = Motorcycle('Triumph','Harley')
+car = Car('Honda')
 print(moto)
 moto.turnEngineOn()
+moto.turnHeadlightOn()
+moto.startDriving()
+moto.turn('left')
+moto.turn('right')
+print(moto)
+moto.stopDriving()
+moto.turnHeadlightOff()
+print("\n")
+print("\n")
+print("\n")
+print(car)
+car.turnHeadlightOn()
+car.startDriving()
+car.turn('left')
+car.turn('right')
+print(car)
+car.stopDriving()
+car.turnHeadlightOff()

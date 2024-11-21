@@ -19,6 +19,6 @@ longString = ''
 while number <= 10:
     number = number + 1
     string = str(number)
-    longString = longString + ' ' + string
-    if len(longString) == 21:
+    longString += string+' '
+    if number == 10 :
         print(longString)
