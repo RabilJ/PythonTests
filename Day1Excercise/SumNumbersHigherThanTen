@@ -1,0 +1,10 @@
+def sum_numbers_higher_than_ten(list):
+    total = 0
+    for number in list:
+        if number > 10:
+            total += number
+    return total
+
+list = [5,12,7,20,3,15,8,1,30]
+print(sum_numbers_higher_than_ten(list))
+

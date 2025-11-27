@@ -1,0 +1,17 @@
+def swap_values_of_three_variables(a, b, c):
+    print(f"Before swap: a = {a}, b = {b}, c = {c}")
+    a, b, c = c, a, b
+    print(f"After swap: a = {a}, b = {b}, c = {c}")
+    print('\n')
+
+def swap_values_of_two_variables(a,b):
+    print(f"Before swap: a = {a}, b = {b}")
+    a = a + b
+    b = a - b
+    a = a - b
+    print(f"After swap: a = {a}, b = {b}")
+
+
+swap_values_of_three_variables(5, 10, 15)
+
+swap_values_of_two_variables(20, 30)
