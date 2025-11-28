@@ -1,0 +1,27 @@
+import re
+
+pattern = re.compile(r'^(?:\(?\+48\)?|0048)?[ -]?(?:\d{3}[ -]?\d{3}[ -]?\d{3})$')
+
+tests = [
+    "123456789",
+    "123 456 789",
+    "123-456-789",
+    "+48 123 456 789",
+    "(+48)123-456-789",
+    "0048 123456789",
+    "12-3456-7890",    # niepoprawny
+    "abc123456"        # niepoprawny
+]
+
+for number in tests:
+    print(number, "->", bool(pattern.fullmatch(number)))
+
+#     Krótkie wyjaśnienie (co robi regex)
+
+# ^(...)$ — kotwiczy cały ciąg (cały string musi pasować).
+
+# (?:\(?\+48\)?|0048)? — opcjonalny prefiks kraju: +48 (może być w nawiasach) lub 0048.
+
+# [ -]? — opcjonalny pojedynczy separator (spacja lub myślnik) po prefiksie.
+
+# \d{3}[ -]?\d{3}[ -]?\d{3} — trzy grupy po 3 cyfry, pomiędzy grupami opcjonalny separator (spacja lub myślnik).
