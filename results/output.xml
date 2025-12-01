@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.2 on win32)" generated="2025-12-01T13:23:38.921386" rpa="false" schemaversion="5">
+<suite id="s1" name="PythonProject" source="C:\PythonProject">
+<suite id="s1-s1" name="Day3Excercise" source="C:\PythonProject\Day3Excercise">
+<suite id="s1-s1-s1" name="ShouldAddShouldCompare" source="C:\PythonProject\Day3Excercise\ShouldAddShouldCompare.robot">
+<test id="s1-s1-s1-t1" name="Add Test" line="10">
+<kw name="Add Numbers">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-12-01T13:23:38.991292" level="INFO">${result} = 30</msg>
+<var>${result}</var>
+<arg>${NUMBER_ONE} + ${NUMBER_TWO}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-12-01T13:23:38.990952" elapsed="0.000476"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>The result of adding ${NUMBER_ONE} and ${NUMBER_TWO} is: ${result}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-12-01T13:23:38.991592" elapsed="0.000626"/>
+</kw>
+<status status="PASS" start="2025-12-01T13:23:38.990473" elapsed="0.001880"/>
+</kw>
+<status status="PASS" start="2025-12-01T13:23:38.987647" elapsed="0.004912"/>
+</test>
+<test id="s1-s1-s1-t2" name="Compare String Test" line="12">
+<kw name="Compare Strings">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-12-01T13:23:39.005201" level="INFO">${string1} = Hello World</msg>
+<var>${string1}</var>
+<arg>Hello World</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-12-01T13:23:39.005003" elapsed="0.002817"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-12-01T13:23:39.008247" level="INFO">${string2} = Hello World</msg>
+<var>${string2}</var>
+<arg>Hello World</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-12-01T13:23:39.007963" elapsed="0.000386"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${string1}</arg>
+<arg>${string2}</arg>
+<arg>Strings are not equal!</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-12-01T13:23:39.008470" elapsed="0.000263"/>
+</kw>
+<kw name="Should Not Be Equal" owner="BuiltIn">
+<msg time="2025-12-01T13:23:39.009128" level="FAIL">Strings should not be equal!: Hello World == Hello World</msg>
+<arg>${string3}</arg>
+<arg>${string4}</arg>
+<arg>Strings should not be equal!</arg>
+<doc>Fails if the given objects are equal.</doc>
+<status status="FAIL" start="2025-12-01T13:23:39.008845" elapsed="0.003646">Strings should not be equal!: Hello World == Hello World</status>
+</kw>
+<arg>Hello World</arg>
+<arg>Hello World</arg>
+<status status="FAIL" start="2025-12-01T13:23:39.004656" elapsed="0.008029">Strings should not be equal!: Hello World == Hello World</status>
+</kw>
+<status status="FAIL" start="2025-12-01T13:23:38.995262" elapsed="0.017887">Strings should not be equal!: Hello World == Hello World</status>
+</test>
+<doc>This is a tryout test suite for Robot Framework.</doc>
+<status status="FAIL" start="2025-12-01T13:23:38.978157" elapsed="0.049505"/>
+</suite>
+<status status="FAIL" start="2025-12-01T13:23:38.974503" elapsed="0.062708"/>
+</suite>
+<status status="FAIL" start="2025-12-01T13:23:38.931312" elapsed="0.109125"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="PythonProject" id="s1" pass="1" fail="1" skip="0">PythonProject</stat>
+<stat name="Day3Excercise" id="s1-s1" pass="1" fail="1" skip="0">PythonProject.Day3Excercise</stat>
+<stat name="ShouldAddShouldCompare" id="s1-s1-s1" pass="1" fail="1" skip="0">PythonProject.Day3Excercise.ShouldAddShouldCompare</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

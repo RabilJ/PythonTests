@@ -1,14 +1,14 @@
-print('     *\n')
-print('    ***\n')
-print('   *****\n')
-print('  *******\n')
-print(' *********\n')
+# print('     *\n')
+# print('    ***\n')
+# print('   *****\n')
+# print('  *******\n')
+# print(' *********\n')
 
 treeLevel = '*'
-spaceString = '     '
+spaceString = '          '
 levelLength = 0
 print(spaceString+treeLevel)
-while levelLength <= 10:
+while levelLength <= 20:
     spaceString = spaceString[:-1]
     treeLevel+='**'
     print(spaceString+treeLevel)
